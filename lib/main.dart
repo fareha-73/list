@@ -1,8 +1,8 @@
+
+import 'package:app/List_grid.dart';
 import 'package:flutter/material.dart';
-import 'package:app/homepage1.dart'; 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(MyApp());
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -10,12 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
       debugShowCheckedModeBanner: false,
-      home: const Homepage(), // Ensure Homepage is properly defined in homepage1.dart
+      
+      theme: ThemeData(
+        brightness: Brightness.dark,primaryColor: Colors.amberAccent),
+      
+  home: ListGrid(),
     );
   }
 }
