@@ -9,11 +9,9 @@ class ListGrid extends StatefulWidget {
 
 class _ListGridState extends State<ListGrid> {
   List<String> fruits = ['orange', 'apple', 'banana', 'mango'];
-  Map fruits_person = {    
-  'fruits': ['orange', 'apple', 'banana', 'mango'],
-  'names': ['enni', 'fareha', 'samira', 'pinki']
-
-        
+  Map fruits_person = {
+    'fruits': ['orange', 'apple', 'banana', 'mango'],
+    'names': ['enni', 'fareha', 'samira', 'pinki'],
   };
 
   @override
@@ -24,22 +22,20 @@ class _ListGridState extends State<ListGrid> {
         backgroundColor: Colors.blue,
         elevation: 0,
       ),
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         child: ListView.builder(
           itemCount: fruits.length,
           itemBuilder: (context, index) {
             return Card(
-              
               child: ListTile(
-                onTap:(){
+                onTap: () {
                   print((fruits_person['fruits'][index]));
-
                 },
                 leading: Icon(Icons.person),
-              title: Text(fruits_person['fruits'][index]),
-            subtitle: Text(fruits_person['names'][index]),
-            ),
+                title: Text(fruits_person['fruits'][index]),
+                subtitle: Text(fruits_person['names'][index]),
+              ),
             );
           },
         ),
